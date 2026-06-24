@@ -1,3 +1,8 @@
+name: CI
+on:
+  workflow_dispatch:
+    branches: [ main ]
+
 jobs:
   call-reusable-workflow:
     uses: roquevaamonde/workflows/.github/workflows/python_CI.yml@main
