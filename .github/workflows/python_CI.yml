@@ -39,8 +39,6 @@ jobs:
         with:
           python-version: ${{ inputs.python-version }}
 
-      # Aquí añade tú el caché (investiga cómo usar actions/cache con hash de requirements)
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
