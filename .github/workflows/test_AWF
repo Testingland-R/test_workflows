@@ -1,17 +1,5 @@
 name: CI
-on:
-  workflow_dispatch:
-    inputs:
-      base_branch:
-        description: 'Base branch for PR (target)'
-        required: true
-        default: 'master'
-        type: string
-      head_branch:
-        description: 'Head branch for PR (source)'
-        required: true
-        default: 'development'
-        type: string
+on: [ workflow_dispatch ]
 
 jobs:
   call-reusable-workflow:
