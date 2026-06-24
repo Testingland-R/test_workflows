@@ -25,9 +25,9 @@ def test_colour_validator_run(capsys):
     assert captured.out == "The colour is blue.\n"
 
 def test_colour_validator_script():
-    """Test the main.py script execution."""
+    """Test the colour_validator.py script execution."""
     result = subprocess.run(
-        [sys.executable, "main.py"],
+        [sys.executable, "colour_validator.py"],
         capture_output=True,
         text=True,
         check=True
