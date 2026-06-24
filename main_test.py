@@ -15,3 +15,4 @@ def test_main_get_colour():
     main = Main("invalid")
     assert main.get_colour() == "The colour is not in the list."
 
+print
