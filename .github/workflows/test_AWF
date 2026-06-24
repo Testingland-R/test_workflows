@@ -3,6 +3,6 @@ on: [ workflow_dispatch ]
 
 jobs:
   call-reusable-workflow:
-    uses: roquevaamonde/workflows/.github/workflows/python_CI.yml@main
+    uses: ./.github/workflows/python_CI.yml
     with:
       python-version: '3.11'

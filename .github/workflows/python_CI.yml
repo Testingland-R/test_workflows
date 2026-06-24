@@ -1,0 +1,50 @@
+name: "Reusable Python CI workflow"
+
+on:
+  workflow_call:
+    inputs:
+      python-version:
+        description: 'Python version to use'
+        required: true
+        type: string
+        default: '3.11'
+      working-directory:
+        description: 'Directory where the code is located'
+        required: false
+        type: string
+        default: '.'
+      test-command:
+        description: 'Command to run the tests'
+        required: false
+        type: string
+        default: 'pytest --maxfail=1'
+      dependency-install-command:
+        description: 'Command to install dependencies'
+        required: false
+        type: string
+        default: 'pip install -r requirements.txt'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ inputs.working-directory }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ inputs.python-version }}
+
+      # Aquí añade tú el caché (investiga cómo usar actions/cache con hash de requirements)
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          ${{ inputs.dependency-install-command }}
+
+      - name: Run tests
+        run: ${{ inputs.test-command }}
