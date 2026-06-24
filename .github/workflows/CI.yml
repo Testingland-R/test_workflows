@@ -1,14 +1,6 @@
 name: Executable Workflow
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: 'Branch to run the workflow on'
-        required: true
-        type: choice
-        options:
-          - ${{ github.event.repository.branches }}
-
 
 jobs:
   call-reusable-workflow:
