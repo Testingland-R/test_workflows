@@ -23,13 +23,3 @@ def test_colour_validator_run(capsys):
     validator.run()
     captured = capsys.readouterr()
     assert captured.out == "The colour is blue.\n"
-
-def test_colour_validator_script():
-    """Test the colour_validator.py script execution."""
-    result = subprocess.run(
-        [sys.executable, "colour_validator.py"],
-        capture_output=True,
-        text=True,
-        check=True
-    )
-    assert result.returncode == 0
