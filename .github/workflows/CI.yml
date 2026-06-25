@@ -10,4 +10,3 @@ jobs:
       test-command: 'pytest --maxfail=1 --cov -v'
     secrets:
       repo_token: ${{ secrets.REUSABLE_WORKFLOW_TOKEN }}
-      sonar_token: ${{ secrets.SONAR_TOKEN }}
