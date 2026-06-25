@@ -4,7 +4,7 @@ on:
 
 jobs:
   call-reusable-workflow:
-    uses: roquevaamonde/workflows/.github/workflows/python_CI.yml@${{ vars.PYTHON_WF_CI_SHA }}
+    uses: roquevaamonde/workflows/.github/workflows/python_CI.yml@main
     with:
       python-version: '3.11'
       test-command: 'pytest --maxfail=1 --cov -v'
