@@ -4,5 +4,13 @@
     "config:base",
     ":dependencyDashboard"
   ],
-  "pinDigests": true
+  "pinDigests": true,
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["digest"],
+      "automerge": true
+    }
+  ]
 }
