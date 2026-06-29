@@ -13,6 +13,16 @@
   "requiredStatusChecks": null,
   "packageRules": [
     {
+      "matchManagers": ["github-actions"],
+      "matchFileNames": [".github/workflows/pytest-scan.yml"],
+      "groupName": "pytest-scan-deps"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchFileNames": [".github/workflows/sonarqube-scan.yml"],
+      "groupName": "sonarqube-scan-deps"
+    },
+    {
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["digest"],
       "automerge": true
