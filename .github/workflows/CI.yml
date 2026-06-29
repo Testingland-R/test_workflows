@@ -9,7 +9,7 @@ jobs:
     uses: Testingland-R/workflows/.github/workflows/pytest-scan.yml@60e89a485a6450fb74189020cb417fc4b87bda61 # main
     with:
       python-version: '3.11'
-      test-command: 'pytest --maxfail=1 --cov -v'
+      test-command: 'pytest --maxfail=1 --cov=. --cov-report=xml -v'
 
   sonarqube-scan:
     needs: python-tests
