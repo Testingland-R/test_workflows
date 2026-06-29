@@ -6,14 +6,14 @@ on:
 
 jobs:
   python-tests:
-    uses: Testingland-R/workflows/.github/workflows/pytest-scan.yml@main
+    uses: Testingland-R/workflows/.github/workflows/pytest-scan.yml@ca1bff5bc2bd9bb6e33b882c8747babfeada0370 # main
     with:
       python-version: '3.11'
       test-command: 'pytest --maxfail=1 --cov -v'
 
   sonarqube-scan:
     needs: python-tests
-    uses: Testingland-R/workflows/.github/workflows/sonarqube-scan.yml@main
+    uses: Testingland-R/workflows/.github/workflows/sonarqube-scan.yml@ca1bff5bc2bd9bb6e33b882c8747babfeada0370 # main
     secrets:
       sonar-token: ${{ secrets.SONAR_TOKEN }}
     with:
