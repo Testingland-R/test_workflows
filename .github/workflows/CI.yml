@@ -4,7 +4,7 @@ on:
 
 jobs:
   call-reusable-workflow:
-    uses: Testingland-R/workflows/.github/workflows/python_CI.yml@main
+    uses: Testingland-R/workflows/.github/workflows/python_CI.yml@43687a519d7ed4a95ba6b4edb44d4e917a986021 # main
     secrets:
       sonar-token: ${{ secrets.SONAR_TOKEN }}
     with:
