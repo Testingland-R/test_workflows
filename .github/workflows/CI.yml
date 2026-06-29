@@ -5,7 +5,7 @@ on:
 
 jobs:
   python-tests:
-    uses: Testingland-R/workflows/.github/workflows/python/pytest-scan.yml@2f76782539aec2160b0fef744c8392a77970b68b # main
+    uses: Testingland-R/workflows/.github/workflows/pytest-scan.yml@2f76782539aec2160b0fef744c8392a77970b68b # main
     with:
       python-version: '3.11'
       test-command: 'pytest --maxfail=1 --cov -v'
