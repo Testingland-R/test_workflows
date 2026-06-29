@@ -10,7 +10,6 @@
   "automerge": true,
   "automergeType": "pr",
   "automergeStrategy": "squash",
-  "requiredStatusChecks": null,
   "packageRules": [
     {
       "matchManagers": ["github-actions"],

@@ -1,4 +1,4 @@
-"""colour_validator.py - Colour Validator for checking valid colours."""
+"""colour_validator.py - Colour Validator for checking valid flavours."""
 
 
 class ColourValidator:
