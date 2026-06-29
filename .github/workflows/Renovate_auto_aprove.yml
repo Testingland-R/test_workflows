@@ -3,9 +3,12 @@ name: Renovate auto approve call
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
+  pull_request_review:
+    types: [dismissed]
+
 
 jobs:
-  llamar-aprobador:
+  Aprover_call:
     uses: Testingland-R/workflows/.github/workflows/auto-approve-renovate.yml@main
     permissions:
       pull-requests: write
