@@ -7,7 +7,7 @@ on:
 jobs:
   python-tests:
     uses: Testingland-R/workflows/.github/workflows/pytest-scan.yml@main
-    inputs:
+    with:
       python-version: '3.11'
       test-command: 'pytest --maxfail=1 --cov -v'
 
@@ -16,5 +16,5 @@ jobs:
     uses: Testingland-R/workflows/.github/workflows/sonarqube-scan.yml@main
     secrets:
       sonar-token: ${{ secrets.SONAR_TOKEN }}
-    inputs:
+    with:
       sonar-project-key: ${{ vars.SONAR_PROJECT_KEY }}
