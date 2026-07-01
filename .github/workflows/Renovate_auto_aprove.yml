@@ -9,7 +9,7 @@ on:
 
 jobs:
   Aprover_call:
-    uses: Testingland-R/workflows/.github/workflows/auto-approve-renovate.yml@626cc04b74f5bfaf75359aae8616a325908a3e90 # main
+    uses: Testingland-R/workflows/.github/workflows/auto-approve-renovate.yml@6cd4d8b7c3dfc3023d6173c4ff0f5d9507e66a37 # main
     permissions:
       pull-requests: write
       contents: read

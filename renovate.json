@@ -21,6 +21,11 @@
       "matchFileNames": [".github/workflows/sonarqube-scan.yml"],
       "groupName": "sonarqube-scan-deps"
     },
+        {
+      "matchManagers": ["github-actions"],
+      "matchFileNames": [".github/workflows/Renovate_auto_aprove.yml"],
+      "groupName": "Renovate_auto_aprove.yml"
+    },
     {
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["digest"],
