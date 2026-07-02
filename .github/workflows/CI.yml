@@ -8,14 +8,14 @@ on:
 
 jobs:
   python-tests:
-    uses: Testingland-R/workflows/.github/workflows/pytest-scan.yml@6cd4d8b7c3dfc3023d6173c4ff0f5d9507e66a37 # main
+    uses: Testingland-R/workflows/.github/workflows/pytest-scan.yml@37f26a8bf71079e20fd46646edff6be91b2733dc # main
     with:
       python-version: '3.11'
       test-command: 'pytest --maxfail=1 --cov=. --cov-report=xml -v'
 
   sonarqube-scan:
     needs: python-tests
-    uses: Testingland-R/workflows/.github/workflows/sonarqube-scan.yml@6cd4d8b7c3dfc3023d6173c4ff0f5d9507e66a37 # main
+    uses: Testingland-R/workflows/.github/workflows/sonarqube-scan.yml@37f26a8bf71079e20fd46646edff6be91b2733dc # main
     secrets:
       sonar-token: ${{ secrets.SONAR_TOKEN }}
     with:
